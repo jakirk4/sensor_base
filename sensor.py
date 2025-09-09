@@ -20,6 +20,8 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdata, msg):
     try:
         data = json.loads(msg.payload.decode())
+        print(client)
+        print(userdata)
         print(data)
         with open(logfile, "a") as f:
             f.write(str(data) + "\n")
