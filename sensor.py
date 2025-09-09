@@ -2,13 +2,13 @@ import paho.mqtt.client as mqtt
 import json
 import configparser
 
-config = configparser.ConfigParser()
+#config = configparser.ConfigParser()
 
-config.read('settings.ini')
+#config.read('settings.ini')
 
-mqtt_ip = config['mqtt']['ip']
-mqtt_topic = config['mqtt']['topic']
-logfile = config['log']['logfile']
+mqtt_ip = "localhost"
+mqtt_topic = "sensors/pico1"
+logfile = "sensor_data.txt"
 
 
 def on_connect(client, userdata, flags, rc):
