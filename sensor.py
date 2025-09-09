@@ -23,6 +23,7 @@ def on_message(client, userdata, msg):
         print(client)
         print(userdata)
         print(data)
+
         with open(logfile, "a") as f:
             f.write(str(data) + "\n")
     except Exception as e:
